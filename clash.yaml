@@ -1,0 +1,808 @@
+# With https://realiti.me
+# 作者_TG @christine_tys
+mixed-port: 7890
+redir-port: 7891
+tproxy-port: 1536
+allow-lan: true
+mode: rule
+global-ua: clash-verge/v2.0.0
+geodata-mode: true
+geodata-loader: standard
+unified-delay: true
+log-level: debug
+ipv6: true
+external-controller: 0.0.0.0:9090
+tcp-concurrent: true
+enable-process: true
+find-process-mode: strict
+global-client-fingerprint: chrome
+keep-alive-interval: 30
+geo-auto-update: true
+geo-update-interval: 24
+geox-url:
+  geoip: "https://ghp.ci/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
+  geosite: "https://ghp.ci/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+  mmdb: "https://ghp.ci/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb"
+  asn: "https://ghp.ci/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
+profile:
+  store-selected: true
+  store-fake-ip: true
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  force-domain:
+    - "+.v2ex.com"
+  skip-domain:
+    - "+.mi.com"
+tun:
+  enable: false
+  device: MihomoCore
+  stack: mixed
+  mtu: 1500
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+  auto-route: true
+  auto-detect-interface: true
+dns:
+  enable: true
+  prefer-h3: true
+  use-system-hosts: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  respect-rules: true
+  enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.0/16
+  fake-ip-filter:
+    - "*"
+    - "+.lan"
+    - "connect.rom.miui.com"
+    - "+.miwifi.com"
+    - "+.ntp.org"
+    - "+.u-tools.cn"
+    - "+.mediatek.com"
+    - "+.cfprefer1.xyz"
+    - "+.wetab.link"
+    - "+.tyasaka.xyz"
+    # QQ
+    - "localhost.ptlogin2.qq.com"
+    - "localhost.sec.qq.com"
+    # WeChat
+    - "localhost.work.weixin.qq.com"
+    - "+.weixin.qq.com"
+    - "+.wechat.com"
+    # Windows
+    - "time.windows.com"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - "+.wpsmail.net"
+    - "+.henzanapp.com"
+    - "+.pconline.com.cn"
+  default-namerserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://cloudflare-dns.com/dns-query
+    - https://unfiltered.adguard-dns.com/dns-query
+    - https://162.159.36.1/dns-query
+  proxy-server-nameserver:
+    - 117.50.10.10
+    - 119.29.29.29
+  nameserver-policy:
+    "GEOSITE:CN":
+      - https://doh.pub/dns-query
+      - https://dns.alidns.com/dns-query
+  fallback:
+    - tls://8.8.4.4
+    - tls://1.1.1.1
+
+p: &p {
+  type: http,
+  udp: true,
+  ip-version: ipv6-prefer,
+  smux: {
+    enable: true,
+  },
+}
+u: &u
+  use:
+    - 1.便宜机场
+    # - 2.水牛云
+    # - 3.伍佰机场
+    # - 4.开心机场
+    # - 5.网速猫
+    # - 6.fil VPN机场
+    # - 7.链接VPN
+    # - 8.锦绣山河
+    # - 9.加速器
+    # - 10.地鼠机场
+    # - 11.快乐机场
+    - 12.宝可梦
+    # - 13.星巴克
+    # - 14.PowerWan
+    # - 15.蘑菇饭
+    # - 16.奈斯云
+    # - 17.便宜机场
+    # - 18.云端
+    # - 19.新一元
+    # - 20.极速
+    # - 21.文化人
+    # - 22.白嫖机场
+    # - 23.团子机场
+    # - 24.巨蜥
+    # - 25.一块机场
+    # - 26.飞机云
+    # - 27.FCX
+    # - 28.无限机场
+    # - 29.红杏
+    # - 30.薄荷    
+    # - 31.未来
+    # - 32.吹风机
+    # - 33.三元 
+    # - 34.草莓熊
+    # - 35.黎明机场 
+    # - 36.折花令
+    # - 37.未来机场 
+    # - 38.纵云梯
+    # - 39.Aisu
+    # - 40.红叶
+    # - 41.优惠机场
+    # - 42.公益网络
+    - 43.33云
+    # - 44.NEX    
+    - 45.网速猫     
+    # - 46.Panda    
+    # - 47.布丁猫  
+    # - 48.Cloud  
+    # - 49.静帆 
+    # - 50.IKUN 
+    # - 51.悟空 
+    - 52.EPC 
+    - 53.一个机场
+    - 54.大飞机
+    - 55.自用橘色云
+    - 56.娃哈哈
+    - 57.公共免费
+    - 58.阿Q
+    - 59.公益订阅
+
+proxy-providers:
+  1.便宜机场:
+    <<: *p
+    type: http
+    path: ./proxy_provider/RK2cBM54Mssr.yaml
+    url: https://pianyi.sub.sub.subsub123456789.com/answer/land?token=157289a249b33995e2fbf5730d49d607
+    interval: 21600
+    override:
+      additional-prefix: "便宜机场 |"
+
+  # 2.水牛云:
+  #   <<: *p
+  #   type: http
+  #   path: ./proxy_provider/RqKZsljks08y.yaml
+  #   url: https://wap.nnpy.org/niu/niu?token=812267316f24c2c8d29f23fd7712e70f
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "水牛云 |"
+
+  # 3.伍佰机场:
+  #   <<: *p
+  #   type: http
+  #   path: ./proxy_provider/R307pCEYwNhG.yaml
+  #   url: https://sub.bailian.site/api/v1/client/subscribe?token=3f64e5b4c44729d8c4be2a12b7e68477
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "伍佰机场 |"
+
+  # 4.开心机场:
+  #   <<: *p
+  #   type: http
+  #   path: ./proxy_provider/RMhoN5lpmyRh.yaml
+  #   url: https://kaikaixinxin.jiumaojiu.net/api/v1/client/subscribe?token=4e3f838d3cf7fa2d1ebf1094b21179f4
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "开心机场 |"
+
+  # 5.网速猫:
+  #   <<: *p
+  #   type: http
+  #   path: ./proxy_provider/R7UTvIi13Z87.yaml
+  #   url: https://a.s2cat.cc/api/v1/client/subscribe?token=7beb0838b5f92daea529a9b60bd7ab96
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "网速猫 |"
+
+  # 6.fil VPN机场:
+  #   <<: *p
+  #   type: http
+  #   path: ./proxy_provider/RLE5stQlK6ka.yaml
+  #   url: http://filusdt.fil.org.in:1588/api/v1/client/subscribe?token=27401f340398a680fa5cabfa37d544b2
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "fil VPN机场 |"
+
+  # 7.链接VPN:
+  #   <<: *p
+  #   type: http
+  #   url: https://lianjievpn.com/api/v1/client/subscribe?token=d0afbe11e1f95f8bf0ca184c74462d56
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "链接VPN |"
+
+  # 8.锦绣山河:
+  #   <<: *p
+  #   type: http
+  #   url: https://sub.sanqianlijinxiuheshan.us.kg/api/v1/client/subscribe?token=2c2dd690624248f5cd5b05e4a0b054e4
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "锦绣山河 |"
+
+  # 9.加速器:
+  #   <<: *p
+  #   type: http
+  #   url: https://app.gomeow.cloud/api/v1/client/subscribe?token=e258b2ec62e5f10877ce65f51564041e
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "加速器 |"
+
+  # 10.地鼠机场:
+  #   <<: *p
+  #   type: http
+  #   url: http://66ds.dishujichang.xyz/sha/bi/gfw?token=9161e2ef47872096e6859553749a6c8d
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "地鼠机场 |"
+
+  # 11.快乐机场:
+  #   <<: *p
+  #   type: http
+  #   url: https://dy.kuailejc.xyz/api/v1/client/subscribe?token=8dc24e1e4ace4b2c35f433082e8f8784
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "快乐机场 |"
+
+  12.宝可梦:
+    <<: *p
+    type: http
+    url: https://52pokemon.xz61.cn/api/v1/client/subscribe?token=7f71255e4ca90b031e3349965ca24e01
+    interval: 21600
+    override:
+      additional-prefix: "宝可梦 |"
+
+  # 13.星巴克:
+  #   <<: *p
+  #   type: http
+  #   url: https://jb.taipeicity.news/api/v1/client/subscribe?token=0b33637bdc37c9b2c83cc5c16341a820
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "星巴克 |"
+
+  # 14.PowerWan:
+  #   <<: *p
+  #   type: http
+  #   url: https://powerwan.net/api/v1/client/subscribe?token=9fa48ddd660c2d241eebec1bfaf5b302
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "PowerWan |"
+
+  # 15.蘑菇饭:
+  #   <<: *p
+  #   type: http
+  #   url: https://sub.mogufan.com/api/v1/client/subscribe?token=42e57b2daf6abd14784a406a3f8bfd72
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "蘑菇饭 |"
+
+  # 16.奈斯云:
+  #   <<: *p
+  #   type: http
+  #   url: https://dy.naisicloud.xyz/api/v1/client/subscribe?token=2421aada2584d63a9570653dbe8ebdcc
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "奈斯云 |"
+
+  # 17.便宜机场:
+  #   <<: *p
+  #   type: http
+  #   url: https://pianyi.sub.sub.subsub123456789.com/answer/land?token=1a39266c1fde6e78df2d5bd71ccaa7d7
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "便宜机场 |"
+
+  # 18.云端:
+  #   <<: *p
+  #   type: http
+  #   url: https://aaa.yunduanjc.top/api/v1/client/subscribe?token=7c191547e331f79dcedb93c60bcbc22c
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "云端 |"
+
+  # 19.新一元:
+  #   <<: *p
+  #   type: http
+  #   url: https://sub.xn--4gq62ffxz.net/api/v1/client/subscribe?token=8cdf55502162252c89f022e1dcd5f2d6
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "新一元 |"
+
+  # 20.极速:
+  #   <<: *p
+  #   type: http
+  #   url: https://sub.gougou.live/api/v1/client/subscribe?token=755c07cc00181d278cea3b8d795f33cf
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "极速 |"
+
+  # 21.文化人:
+  #   <<: *p
+  #   type: http
+  #   url: https://www.xn--gmq09hwyu.fun/api/v1/client/subscribe?token=a00088bcc7a87d3c3040c4d7d9d12304
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "文化人 |"
+
+  # 22.白嫖机场:
+  #   <<: *p
+  #   type: http
+  #   url: https://bpjc.lol/api/bpjclol?token=3846c2d69c349681d075cf574c05e7bd
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "白嫖机场 |"
+
+  # 23.团子机场:
+  #   <<: *p
+  #   type: http
+  #   url: https://sub.tuanzi.xyz/api/v1/client/subscribe?token=aaa7af68bbb029f3c53688e757efebff     
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "团子机场 |"
+
+  # 24.巨蜥:
+  #   <<: *p
+  #   type: http
+  #   url: https://47.239.42.117/api/v1/client/subscribe?token=24c9a9207868307d7b582e01944b87c2  
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "巨蜥 |"
+
+
+  # 25.一块机场:
+  #   <<: *p
+  #   type: http
+  #   url: https://sub.xn--4gqp1u.com/s/ba546a539a25985d97f6f07256025296  
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "一块机场 |"
+
+  # 26.飞机云:
+  #   <<: *p
+  #   type: http
+  #   url: https://sub.feiji.v6.army/api/v1/client/subscribe?token=d12964f385e97098e581a5ca3f72fa0b  
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "飞机云 |"
+
+  # 27.FCX:
+  #   <<: *p
+  #   type: http
+  #   url: https://www.cloudshops.xyz/api/v1/client/subscribe?token=cb794572e4b9cac2b365558021eb5f0a 
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "FCX |"
+
+  # 28.无限机场:
+  #   <<: *p
+  #   type: http
+  #   url: https://wx.wuxianjc.top/api/v1/client/subscribe?token=237b9e0b368f35e0c48fa32772814285
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "无限机场 |"
+      
+  # 29.红杏:
+  #   <<: *p
+  #   type: http
+  #   url: https://api-hx.02000.net/api/v1/client/subscribe?token=493b6547d7056da59e9fcae1523ce354
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "红杏 |"      
+
+  # 30.薄荷:
+  #   <<: *p
+  #   type: http
+  #   url: https://subscribe.famint.net/api/v1/client/subscribe?token=d2452778494958d2b6f3aa1694fdbacc
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "薄荷 |"     
+
+  # 31.未来:
+  #   <<: *p
+  #   type: http
+  #   url: https://xn--mest48anb1j.com/s/e42c23c96d312bb4b92c82a1d3d65ea4
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "未来 |"     
+
+  # 32.吹风机:
+  #   <<: *p
+  #   type: http
+  #   url: https://cfj.chuifengji.top/cfj/vip/client/subscribe?token=a09f1be2199b202f458cc82ed86aa49a
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "吹风机 |"     
+
+  # 33.三元:
+  #   <<: *p
+  #   type: http
+  #   url: https://xn--ehq91fquq.com/s/57b58bb4cecf34d5d8b3b360d583b78c
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "三元 |"     
+
+  # 34.草莓熊:
+  #   <<: *p
+  #   type: http
+  #   url: https://sub.xn--2vxn29amga.com/s/8dba40652e4bae3501a3ae95e4dbc28c
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "草莓熊 |"   
+
+  # 35.黎明机场:
+  #   <<: *p
+  #   type: http
+  #   url: https://lmjc.xyz/api/lmjc?token=f36ded33873d0a0166458f9a83beb1fa
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "黎明机场 |"   
+
+  # 36.折花令:
+  #   <<: *p
+  #   type: http
+  #   url: https://user.zhehua.store/s/f2b7209de7e7fe8d70a71e8c2cdfc0cc
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "三折花令 |"   
+
+  # 37.未来机场:
+  #   <<: *p
+  #   type: http
+  #   url: https://xn--mest48anb1j.com/s/e42c23c96d312bb4b92c82a1d3d65ea4
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "未来机场 |"   
+
+  # 38.纵云梯:
+  #   <<: *p
+  #   type: http
+  #   url: https://wub.zongyunti.site/api/v1/client/subscribe?token=4495e4b987f4028244fd9a06f20b0071
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "纵云梯 |"   
+
+  # 39.Aisu:
+  #   <<: *p
+  #   type: http
+  #   url: https://client-sub.aisu.life/s/afc64198464e5a8ddf98f443ddfc66da
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "Aisu |"   
+
+  # 40.红叶:
+  #   <<: *p
+  #   type: http
+  #   url: https://api-hy.02000.net/api/v1/client/subscribe?token=42394c0c1f5f80840b688624a604c481
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "红叶 |"   
+
+  # 41.优惠机场:
+  #   <<: *p
+  #   type: http
+  #   url: https://xn--4oq11ryli3rg.com/s/a9b91c58135845afc4de38d4a79742da
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "优惠机场 |"   
+
+  # 42.公益网络:
+  #   <<: *p
+  #   type: http
+  #   url: https://gy888.xyz/s/ed50ee8315d2b208072b593adb062b09
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "公益网络 |"   
+      
+  43.33云:
+    <<: *p
+    type: http
+    url: http://s.33y.run/v3/subscr?id=628921fe2d394a6a880e9f17f9ed22d9
+    interval: 21600
+    override:
+      additional-prefix: "33云 |"   
+
+  # 44.NEX:
+  #   <<: *p
+  #   type: http
+  #   url: https://sub.nex7.us.kg/api/v1/client/subscribe?token=25c95826d2ce59c5540498598af94bcd
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "NEX |"   
+
+  45.网速猫:
+    <<: *p
+    type: http
+    url: https://a.s2cat.cc/api/v1/client/subscribe?token=7beb0838b5f92daea529a9b60bd7ab96
+    interval: 21600
+    override:
+      additional-prefix: "网速猫 |"   
+
+  # 46.Panda:
+  #   <<: *p
+  #   type: http
+  #   url: https://523qaweg246.pandafly.site/api/v1/client/subscribe?token=66a55fecf16635342c1ca2915b84d70a
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "Panda |"   
+
+  # 47.布丁猫:
+  #   <<: *p
+  #   type: http
+  #   url: https://sub.nodeup.top/IBMQR/MXW62/JK?token=b4638087868254932dbfc4dfd05b2300
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "布丁猫 |"   
+
+  # 48.Cloud:
+  #   <<: *p
+  #   type: http
+  #   url: https://cloud.jsfx.tech/s/2f6fcea0c8551d5576e4e8512da94cd5
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "Cloud |"   
+
+  # 49.静帆:
+  #   <<: *p
+  #   type: http
+  #   url: https://cloud.jsfx.tech/s/2f6fcea0c8551d5576e4e8512da94cd5
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "静帆 |" 
+
+  # 50.IKUN:
+  #   <<: *p
+  #   type: http
+  #   url: https://bvvjj.no-mad-world.club/link/5xu0Sz2Pav5uPHG7?clash=3&extend=1
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "IKUN |" 
+
+  # 51.悟空:
+  #   <<: *p
+  #   type: http
+  #   url: https://sub.xn--mes91t7ofgnw.com/s/7d1f99cddf501f11e06663ba861260e5
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "悟空 |" 
+
+  52.EPC:
+    <<: *p
+    type: http
+    url: https://epclub.xyz/api/epclub?token=5bc6aa9ceee972d7b4a5739027ffe02b
+    interval: 21600
+    override:
+      additional-prefix: "EPC |" 
+
+  53.一个机场:
+    <<: *p
+    type: http
+    url: https://sub.xn--4gqvd492adjr.com/s/a7b291c8dbff878db18f78775424df0b
+    interval: 21600
+    override:
+      additional-prefix: "一个机场 |" 
+
+  54.大飞机:
+    <<: *p
+    type: http
+    url: https://users.dafeiji.one/client/subscribe?token=70a9b5a3d776450ec66491b45be3809c
+    interval: 21600
+    override:
+      additional-prefix: "大飞机 |" 
+
+  55.自用橘色云:
+    <<: *p
+    type: http
+    url: https://s.jusesub.com/jsysub/1bf5673ea96efdf8eec5fd6e8a660832
+    interval: 21600
+    override:
+      additional-prefix: "自用橘色云 |" 
+
+  56.娃哈哈:
+    <<: *p
+    type: http
+    url: https://bailian.uk/s/c0b2e23ed211160792eaa230dbddbdb0
+    interval: 21600
+    override:
+      additional-prefix: "娃哈哈 |" 
+
+  57.公共免费:
+    <<: *p
+    type: http
+    url: https://rss.zyfx6.xyz/clash/
+    interval: 21600
+    override:
+      additional-prefix: "公共免费 |" 
+
+  58.阿Q:
+    <<: *p
+    type: http
+    url: https://aqy.phantasy.life/api/v1/client/subscribe?token=e19b52aed2b909781ec523d3add2fb1c
+    interval: 21600
+    override:
+      additional-prefix: "阿Q |" 
+
+  59.公益订阅:
+    <<: *p
+    type: http
+    url: https://suo.yt/oEMNcsd
+    interval: 21600
+    override:
+      additional-prefix: "公益订阅|" 
+
+proxy-groups:
+  - {
+      name: 🎯Mode,
+      type: select,
+      proxies: [
+        🚀Manual,
+        ♻️ SELECT1,
+        ♻️ SELECT2,
+        ♻️ SELECT3,
+        🍃DirectMode,
+        ♨️Auto,
+      ],
+    }
+  - {
+      name: 🚀Manual,
+      type: select,
+      proxies: [],
+      <<: *u,
+      url: "http://cp.cloudflare.com/generate_204",
+      interval: 300,
+      lazy: false,
+      timeout: 5000,
+      max-failed-times: 5,
+    }
+  - { name: ♻️ SELECT1, type: select, proxies: [🚀Manual], <<: *u }
+  - { name: ♻️ SELECT2, type: select, proxies: [🚀Manual], <<: *u }
+  - {
+      name: ♻️ SELECT3,
+      type: select,
+      proxies: [🚀Manual, 🍃DirectMode],
+      <<: *u,
+    }
+  - {
+      name: 🎮️Steam,
+      type: select,
+      proxies: [🎯Mode, ♻️ SELECT1, ♻️ SELECT2, ♻️ SELECT3],
+    }
+  - {
+      name: 💎Emby,
+      type: select,
+      proxies: [♻️ SELECT1, ♻️ SELECT2, ♻️ SELECT3],
+      <<: *u,
+    }
+  - {
+      name: 🪁Microsoft,
+      type: select,
+      proxies: [
+        🍃DirectMode,
+        🎯Mode,
+        ♻️ SELECT1,
+        ♻️ SELECT2,
+        ♻️ SELECT3,
+        ♨️Auto,
+      ],
+    }
+  - {
+      name: 🤖OpenAI,
+      type: select,
+      proxies: [♻️ SELECT1, ♻️ SELECT2, ♻️ SELECT3],
+      <<: *u,
+    }
+  - {
+      name: 💬Telegram,
+      type: select,
+      proxies: [🎯Mode, ♻️ SELECT1, ♻️ SELECT2, ♻️ SELECT3],
+      <<: *u,
+    }
+  - {
+      name: 🧭Google,
+      type: select,
+      proxies: [🎯Mode, ♻️ SELECT1, ♻️ SELECT2, ♻️ SELECT3],
+    }
+  - { name: 🎏Final, type: select, proxies: [🎯Mode] }
+  - { name: 🍃DirectMode, type: select, proxies: [DIRECT] }
+  - {
+      name: ♨️Auto,
+      type: url-test,
+      interval: 600,
+      url: "https://cp.cloudflare.com/generate_204",
+      proxies: [],
+      <<: *u,
+    }
+
+rule-providers:
+  Telegram:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rule/Telegram.yaml
+    url: "https://clash.realiti.me/Telegram.yaml"
+    interval: 43200
+  Google:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rule/Google.yaml
+    url: "https://clash.realiti.me/Google.yaml"
+    interval: 43200
+  Steam:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://clash.realiti.me/steam.yaml"
+    path: ./rule/steam.yaml
+    interval: 43200
+  SteamCN:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://clash.realiti.me/steamcn.yaml"
+    path: ./rule/steamcn.yaml
+    interval: 43200
+  Microsoft:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rule/Microsoft.yaml
+    url: "https://clash.realiti.me/Microsoft.yaml"
+    interval: 43200
+  OpenAI:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml"
+    path: ./rule/openai.yaml
+    interval: 43200
+  FCM:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://clash.realiti.me/fcm.yaml"
+    path: ./rule/fcm.yaml
+    interval: 43200
+
+rules:
+  - DOMAIN,realiti.me,🎏Final
+  - DOMAIN,clash.realiti.me,🎏Final
+  # - Rule Group
+  - RULE-SET,Google,🧭Google
+  - RULE-SET,Microsoft,🪁Microsoft
+  - RULE-SET,Telegram,💬Telegram
+  - RULE-SET,SteamCN,🍃DirectMode
+  - RULE-SET,Steam,🎮️Steam
+  - RULE-SET,OpenAI,🤖OpenAI
+  - RULE-SET,FCM,🍃DirectMode
+  # GEO Rule
+  - GEOSITE,CN,🍃DirectMode
+  - GEOIP,CN,🍃DirectMode,no-resolve
+  - MATCH,🎏Final
