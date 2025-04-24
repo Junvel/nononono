@@ -168,14 +168,16 @@ u: &u
     # - 49.静帆 
     # - 50.IKUN 
     # - 51.悟空 
-    - 52.EPC 
-    - 53.一个机场
+    # - 52.EPC 
+    # - 53.一个机场
     - 54.大飞机
-    - 55.自用橘色云
+    # - 55.自用橘色云
     - 56.娃哈哈
     - 57.公共免费
     - 58.阿Q
-    - 59.公益订阅
+    - 59.五月
+    - 60.来吧
+
 
 proxy-providers:
   1.便宜机场:
@@ -593,21 +595,21 @@ proxy-providers:
   #   override:
   #     additional-prefix: "悟空 |" 
 
-  52.EPC:
-    <<: *p
-    type: http
-    url: https://epclub.xyz/api/epclub?token=5bc6aa9ceee972d7b4a5739027ffe02b
-    interval: 21600
-    override:
-      additional-prefix: "EPC |" 
+  # 52.EPC:
+  #   <<: *p
+  #   type: http
+  #   url: https://epclub.xyz/api/epclub?token=5bc6aa9ceee972d7b4a5739027ffe02b
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "EPC |" 
 
-  53.一个机场:
-    <<: *p
-    type: http
-    url: https://sub.xn--4gqvd492adjr.com/s/a7b291c8dbff878db18f78775424df0b
-    interval: 21600
-    override:
-      additional-prefix: "一个机场 |" 
+  # 53.一个机场:
+  #   <<: *p
+  #   type: http
+  #   url: https://sub.xn--4gqvd492adjr.com/s/a7b291c8dbff878db18f78775424df0b
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "一个机场 |" 
 
   54.大飞机:
     <<: *p
@@ -617,13 +619,13 @@ proxy-providers:
     override:
       additional-prefix: "大飞机 |" 
 
-  55.自用橘色云:
-    <<: *p
-    type: http
-    url: https://s.jusesub.com/jsysub/1bf5673ea96efdf8eec5fd6e8a660832
-    interval: 21600
-    override:
-      additional-prefix: "自用橘色云 |" 
+  # 55.自用橘色云:
+  #   <<: *p
+  #   type: http
+  #   url: https://s.jusesub.com/jsysub/1bf5673ea96efdf8eec5fd6e8a660832
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "自用橘色云 |" 
 
   56.娃哈哈:
     <<: *p
@@ -649,13 +651,21 @@ proxy-providers:
     override:
       additional-prefix: "阿Q |" 
 
-  59.公益订阅:
+  59.五月:
     <<: *p
     type: http
     url: https://suo.yt/oEMNcsd
     interval: 21600
     override:
-      additional-prefix: "公益订阅|" 
+      additional-prefix: "五月|" 
+
+  60.来吧:
+    <<: *p
+    type: http
+    url: https://lsdm.laibajc.top/laiba/ml/client/subscribe?token=44546abc5bb8ab731d33681c88e99b3a
+    interval: 21600
+    override:
+      additional-prefix: "来吧|" 
 
 proxy-groups:
   - {
