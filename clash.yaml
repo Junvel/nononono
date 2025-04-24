@@ -173,7 +173,7 @@ u: &u
     - 54.大飞机
     # - 55.自用橘色云
     - 56.娃哈哈
-    - 57.公共免费
+    # - 57.公共免费
     - 58.阿Q
     - 59.五月
     - 60.来吧
@@ -635,13 +635,13 @@ proxy-providers:
     override:
       additional-prefix: "娃哈哈 |" 
 
-  57.公共免费:
-    <<: *p
-    type: http
-    url: https://rss.zyfx6.xyz/clash/
-    interval: 21600
-    override:
-      additional-prefix: "公共免费 |" 
+  # 57.公共免费:
+  #   <<: *p
+  #   type: http
+  #   url: https://rss.zyfx6.xyz/clash/
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "公共免费 |" 
 
   58.阿Q:
     <<: *p
