@@ -177,7 +177,9 @@ u: &u
     - 58.阿Q
     - 59.五月
     - 60.来吧
-
+    - 61.光云
+    - 62.七点
+    - 63.花猫
 
 proxy-providers:
   1.便宜机场:
@@ -667,6 +669,31 @@ proxy-providers:
     override:
       additional-prefix: "来吧|" 
 
+  61.光云:
+    <<: *p
+    type: http
+    url: https://guang-cloud.com/api/v1/client/subscribe?token=9e987718281774e38b75221f03182082
+    interval: 21600
+    override:
+      additional-prefix: "光云 |" 
+
+  62.七点:
+    <<: *p
+    type: http
+    url: https://vvs.e54.site/api/v1/client/subscribe?token=5501aa88a0e6f8774650109cb89466ae
+    interval: 21600
+    override:
+      additional-prefix: "七点|" 
+
+  63.花猫:
+    <<: *p
+    type: http
+    url: http://38.55.97.141:12321/api/v1/client/subscribe?token=d8366698a058662e678b242f33f53f24
+    interval: 21600
+    override:
+      additional-prefix: "花猫|" 
+
+      
 proxy-groups:
   - {
       name: 🎯Mode,
