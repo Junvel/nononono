@@ -180,6 +180,8 @@ u: &u
     - 61.光云
     - 62.七点
     - 63.花猫
+    - 64.云桥
+    - 65.汽水
 
 proxy-providers:
   1.便宜机场:
@@ -693,7 +695,22 @@ proxy-providers:
     override:
       additional-prefix: "花猫|" 
 
-      
+  64.云桥:
+    <<: *p
+    type: http
+    url: https://api-yq.02000.net/api/v1/client/subscribe?token=495e59bf08e4c3bf239ac5c0f2b34f85
+    interval: 21600
+    override:
+      additional-prefix: "云桥|" 
+
+  65.汽水:
+    <<: *p
+    type: http
+    url: https://qishuijc.top/api/v1/client/subscribe?token=7b9336f59c8503847ffc9b16ad05ddeb
+    interval: 21600
+    override:
+      additional-prefix: "汽水|"       
+
 proxy-groups:
   - {
       name: 🎯Mode,
