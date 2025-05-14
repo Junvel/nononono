@@ -170,18 +170,21 @@ u: &u
     # - 51.悟空 
     # - 52.EPC 
     # - 53.一个机场
-    - 54.大飞机
-    # - 55.自用橘色云
-    - 56.娃哈哈
+    # - 54.大飞机
+    # # - 55.自用橘色云
+    # - 56.娃哈哈
     # - 57.公共免费
     - 58.阿Q
-    - 59.五月
+    # - 59.五月
     - 60.来吧
     - 61.光云
     - 62.七点
     - 63.花猫
     - 64.云桥
     - 65.汽水
+    - 66.Acc
+    - 67.Saa
+
 
 proxy-providers:
   1.便宜机场:
@@ -615,13 +618,13 @@ proxy-providers:
   #   override:
   #     additional-prefix: "一个机场 |" 
 
-  54.大飞机:
-    <<: *p
-    type: http
-    url: https://users.dafeiji.one/client/subscribe?token=70a9b5a3d776450ec66491b45be3809c
-    interval: 21600
-    override:
-      additional-prefix: "大飞机 |" 
+  # 54.大飞机:
+  #   <<: *p
+  #   type: http
+  #   url: https://users.dafeiji.one/client/subscribe?token=70a9b5a3d776450ec66491b45be3809c
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "大飞机 |" 
 
   # 55.自用橘色云:
   #   <<: *p
@@ -631,13 +634,13 @@ proxy-providers:
   #   override:
   #     additional-prefix: "自用橘色云 |" 
 
-  56.娃哈哈:
-    <<: *p
-    type: http
-    url: https://bailian.uk/s/c0b2e23ed211160792eaa230dbddbdb0
-    interval: 21600
-    override:
-      additional-prefix: "娃哈哈 |" 
+  # 56.娃哈哈:
+  #   <<: *p
+  #   type: http
+  #   url: https://bailian.uk/s/c0b2e23ed211160792eaa230dbddbdb0
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "娃哈哈 |" 
 
   # 57.公共免费:
   #   <<: *p
@@ -655,13 +658,13 @@ proxy-providers:
     override:
       additional-prefix: "阿Q |" 
 
-  59.五月:
-    <<: *p
-    type: http
-    url: https://suo.yt/oEMNcsd
-    interval: 21600
-    override:
-      additional-prefix: "五月|" 
+  # 59.五月:
+  #   <<: *p
+  #   type: http
+  #   url: https://suo.yt/oEMNcsd
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "五月|" 
 
   60.来吧:
     <<: *p
@@ -709,7 +712,23 @@ proxy-providers:
     url: https://qishuijc.top/api/v1/client/subscribe?token=7b9336f59c8503847ffc9b16ad05ddeb
     interval: 21600
     override:
-      additional-prefix: "汽水|"       
+      additional-prefix: "汽水|"
+
+  66.Acc:
+    <<: *p
+    type: http
+    url: https://subscr.internetacc.live/api/v1/client/subscribe?token=e398e9d0174e45bd0053c08f9733d0dd
+    interval: 21600
+    override:
+      additional-prefix: "Acc|"
+
+  67.Saa:
+    <<: *p
+    type: http
+    url: https://sc.starbla.de/rss/subscribe?token=179bd05c1312b8386dc203a4d9d71dae
+    interval: 21600
+    override:
+      additional-prefix: "Saa|"
 
 proxy-groups:
   - {
