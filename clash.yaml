@@ -174,17 +174,19 @@ u: &u
     # # - 55.自用橘色云
     # - 56.娃哈哈
     # - 57.公共免费
-    - 58.阿Q
+    # - 58.阿Q
     # - 59.五月
-    - 60.来吧
-    - 61.光云
-    - 62.七点
-    - 63.花猫
-    - 64.云桥
-    - 65.汽水
-    - 66.Acc
-    - 67.Saa
-
+    # - 60.来吧
+    # - 61.光云
+    # - 62.七点
+    # - 63.花猫
+    # - 64.云桥
+    # - 65.汽水
+    # - 66.Acc
+    # - 67.Saa
+    - 68.专线云
+    - 69.元宝   
+    - 70.米云  
 
 proxy-providers:
   1.便宜机场:
@@ -650,13 +652,13 @@ proxy-providers:
   #   override:
   #     additional-prefix: "公共免费 |" 
 
-  58.阿Q:
-    <<: *p
-    type: http
-    url: https://aqy.phantasy.life/api/v1/client/subscribe?token=e19b52aed2b909781ec523d3add2fb1c
-    interval: 21600
-    override:
-      additional-prefix: "阿Q |" 
+  # 58.阿Q:
+  #   <<: *p
+  #   type: http
+  #   url: https://aqy.phantasy.life/api/v1/client/subscribe?token=e19b52aed2b909781ec523d3add2fb1c
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "阿Q |" 
 
   # 59.五月:
   #   <<: *p
@@ -666,69 +668,95 @@ proxy-providers:
   #   override:
   #     additional-prefix: "五月|" 
 
-  60.来吧:
-    <<: *p
-    type: http
-    url: https://lsdm.laibajc.top/laiba/ml/client/subscribe?token=44546abc5bb8ab731d33681c88e99b3a
-    interval: 21600
-    override:
-      additional-prefix: "来吧|" 
+  # 60.来吧:
+  #   <<: *p
+  #   type: http
+  #   url: https://lsdm.laibajc.top/laiba/ml/client/subscribe?token=44546abc5bb8ab731d33681c88e99b3a
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "来吧|" 
 
-  61.光云:
-    <<: *p
-    type: http
-    url: https://guang-cloud.com/api/v1/client/subscribe?token=9e987718281774e38b75221f03182082
-    interval: 21600
-    override:
-      additional-prefix: "光云 |" 
+  # 61.光云:
+  #   <<: *p
+  #   type: http
+  #   url: https://guang-cloud.com/api/v1/client/subscribe?token=9e987718281774e38b75221f03182082
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "光云 |" 
 
-  62.七点:
-    <<: *p
-    type: http
-    url: https://vvs.e54.site/api/v1/client/subscribe?token=5501aa88a0e6f8774650109cb89466ae
-    interval: 21600
-    override:
-      additional-prefix: "七点|" 
+  # 62.七点:
+  #   <<: *p
+  #   type: http
+  #   url: https://vvs.e54.site/api/v1/client/subscribe?token=5501aa88a0e6f8774650109cb89466ae
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "七点|" 
 
-  63.花猫:
-    <<: *p
-    type: http
-    url: http://38.55.97.141:12321/api/v1/client/subscribe?token=d8366698a058662e678b242f33f53f24
-    interval: 21600
-    override:
-      additional-prefix: "花猫|" 
+  # 63.花猫:
+  #   <<: *p
+  #   type: http
+  #   url: http://38.55.97.141:12321/api/v1/client/subscribe?token=d8366698a058662e678b242f33f53f24
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "花猫|" 
 
-  64.云桥:
-    <<: *p
-    type: http
-    url: https://api-yq.02000.net/api/v1/client/subscribe?token=495e59bf08e4c3bf239ac5c0f2b34f85
-    interval: 21600
-    override:
-      additional-prefix: "云桥|" 
+  # 64.云桥:
+  #   <<: *p
+  #   type: http
+  #   url: https://api-yq.02000.net/api/v1/client/subscribe?token=495e59bf08e4c3bf239ac5c0f2b34f85
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "云桥|" 
 
-  65.汽水:
-    <<: *p
-    type: http
-    url: https://qishuijc.top/api/v1/client/subscribe?token=7b9336f59c8503847ffc9b16ad05ddeb
-    interval: 21600
-    override:
-      additional-prefix: "汽水|"
+  # 65.汽水:
+  #   <<: *p
+  #   type: http
+  #   url: https://qishuijc.top/api/v1/client/subscribe?token=7b9336f59c8503847ffc9b16ad05ddeb
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "汽水|"
 
-  66.Acc:
-    <<: *p
-    type: http
-    url: https://subscr.internetacc.live/api/v1/client/subscribe?token=e398e9d0174e45bd0053c08f9733d0dd
-    interval: 21600
-    override:
-      additional-prefix: "Acc|"
+  # 66.Acc:
+  #   <<: *p
+  #   type: http
+  #   url: https://subscr.internetacc.live/api/v1/client/subscribe?token=e398e9d0174e45bd0053c08f9733d0dd
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "Acc|"
 
-  67.Saa:
+  # 67.Saa:
+  #   <<: *p
+  #   type: http
+  #   url: https://sc.starbla.de/rss/subscribe?token=179bd05c1312b8386dc203a4d9d71dae
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "Saa|"
+  
+  68.专线云:
     <<: *p
     type: http
-    url: https://sc.starbla.de/rss/subscribe?token=179bd05c1312b8386dc203a4d9d71dae
+    url: https://sub.xn--ohqvl098j.com/s/1644972cc4c52e2da46e982e43e377c6
     interval: 21600
     override:
-      additional-prefix: "Saa|"
+      additional-prefix: "专线云|"   
+      
+  69.元宝:
+    <<: *p
+    type: http
+    url: https://yuanbao.yuanbaojc.store/s/25b82a925db356a3992ee8814cc0b6d0
+    interval: 21600
+    override:
+      additional-prefix: "元宝|"   
+
+  70.米云:
+    <<: *p
+    type: http
+    url: https://sub.bestbestbest.sbs/subbest/mi/0d5383d66f4a73f507d91e1b672aaa07
+    interval: 21600
+    override:
+      additional-prefix: "米云|"   
+
+
 
 proxy-groups:
   - {
