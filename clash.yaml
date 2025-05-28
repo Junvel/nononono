@@ -187,6 +187,12 @@ u: &u
     - 68.专线云
     - 69.元宝   
     - 70.米云  
+    - 71.第五季
+    - 72.AirUDP # 2025年5月28日14:25:16
+
+
+
+
 
 proxy-providers:
   1.便宜机场:
@@ -754,7 +760,24 @@ proxy-providers:
     url: https://sub.bestbestbest.sbs/subbest/mi/0d5383d66f4a73f507d91e1b672aaa07
     interval: 21600
     override:
-      additional-prefix: "米云|"   
+      additional-prefix: "米云|" 
+
+  71.第五季:
+    <<: *p
+    type: http
+    url: https://diwu.di5ji.lat/api/v1/client/subscribe?token=42f87afe1766b9064c0ec04d9ed96506
+    interval: 21600
+    override:
+      additional-prefix: "第五季|" 
+
+  72.AirUDP:
+    <<: *p
+    type: http
+    url: http://8.138.34.87:3389/saccess/eaa17979170bf0f8e5093a6ac207b59d
+    interval: 21600
+    override:
+      additional-prefix: "AirUDP|" 
+
 
 
 
