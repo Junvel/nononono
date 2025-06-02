@@ -188,7 +188,12 @@ u: &u
     - 69.元宝   
     - 70.米云  
     - 71.第五季
-    - 72.AirUDP # 2025年5月28日14:25:16
+    # - 72.AirUDP # 2025年5月28日14:25:16
+    - 73.小宝可梦
+    - 74.一元中转
+    - 75.克洛斯
+    - 76.tiamo # 2025年6月2日15:38:27
+
 
 
 
@@ -770,18 +775,50 @@ proxy-providers:
     override:
       additional-prefix: "第五季|" 
 
-  72.AirUDP:
+  # 72.AirUDP:
+  #   <<: *p
+  #   type: http
+  #   url: http://8.138.34.87:3389/saccess/eaa17979170bf0f8e5093a6ac207b59d
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "AirUDP|" 
+  73.小宝可梦:
     <<: *p
     type: http
-    url: http://8.138.34.87:3389/saccess/eaa17979170bf0f8e5093a6ac207b59d
+    url: https://52pokemon.xz61.cn/api/v1/client/subscribe?token=16069413fb6a2648d64ca35f54e5c921
     interval: 21600
     override:
-      additional-prefix: "AirUDP|" 
+      additional-prefix: "小宝可梦|"  
+
+  74.一元中转:
+    <<: *p
+    type: http
+    url: https://s.yyzzyyds.xyz/yyzz/114514/subscribe/a2a37e291a87d18e2ec3098344ce63a3
+    interval: 21600
+    override:
+      additional-prefix: "一元中转|"  
+
+  75.克洛斯:
+    <<: *p
+    type: http
+    url: http://sub3.127665.xyz/s/773ecff070f581b5b3ef768da3cce42c
+    interval: 21600
+    override:
+      additional-prefix: "克洛斯|"  
+      
+  76.tiamo:
+    <<: *p
+    type: http
+    url: https://tiamocloud.top/s/65852b3473fc517d88b0041a58d74cbd
+    interval: 21600
+    override:
+      additional-prefix: "tiamo|"  
 
 
 
 
-proxy-groups:
+
+  proxy-groups:
   - {
       name: 🎯Mode,
       type: select,
