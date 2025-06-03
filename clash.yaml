@@ -189,12 +189,10 @@ u: &u
     - 70.米云  
     - 71.第五季
     # - 72.AirUDP # 2025年5月28日14:25:16
-    - 73.小宝可梦
+    - 73.小可梦
     - 74.一元中转
     - 75.克洛斯
     - 76.tiamo # 2025年6月2日15:38:27
-
-
 
 
 
@@ -782,13 +780,14 @@ proxy-providers:
   #   interval: 21600
   #   override:
   #     additional-prefix: "AirUDP|" 
-  73.小宝可梦:
+
+  73.小可梦:
     <<: *p
     type: http
     url: https://52pokemon.xz61.cn/api/v1/client/subscribe?token=16069413fb6a2648d64ca35f54e5c921
     interval: 21600
     override:
-      additional-prefix: "小宝可梦|"  
+      additional-prefix: "小可梦|"  
 
   74.一元中转:
     <<: *p
@@ -815,10 +814,7 @@ proxy-providers:
       additional-prefix: "tiamo|"  
 
 
-
-
-
-  proxy-groups:
+proxy-groups:
   - {
       name: 🎯Mode,
       type: select,
