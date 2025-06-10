@@ -192,7 +192,12 @@ u: &u
     - 73.小可梦
     - 74.一元中转
     - 75.克洛斯
-    - 76.tiamo # 2025年6月2日15:38:27
+    - 76.tiamo # 2025年6月2日15:38:27 
+    - 77.AMEI
+    - 78.雪王
+    - 79.旧巷
+    - 80.星宝 # 2025年6月10日09:04:34
+
 
 
 
@@ -811,7 +816,39 @@ proxy-providers:
     url: https://tiamocloud.top/s/65852b3473fc517d88b0041a58d74cbd
     interval: 21600
     override:
-      additional-prefix: "tiamo|"  
+      additional-prefix: "tiamo|" 
+
+  77.AMEI:
+    <<: *p
+    type: http
+    url: https://xb.inekokkk.com/amei/ab16bee70abd35b164e03434b7608d32
+    interval: 21600
+    override:
+      additional-prefix: "AMEI|" 
+
+  78.雪王:
+    <<: *p
+    type: http
+    url: https://sub.xn--vpn-3f0h822m.com/s/64bbe6a8f9597cc7575026537ee8b04b
+    interval: 21600
+    override:
+      additional-prefix: "雪王|" 
+
+  79.旧巷:
+    <<: *p
+    type: http
+    url: https://api-jx.02000.net/api/v1/jiuxiang/subscribe?token=31b866a385af61dd80ace12412977bd5
+    interval: 21600
+    override:
+      additional-prefix: "旧巷|" 
+
+  80.星宝:
+    <<: *p
+    type: http
+    url: https://xingbaody.ekxo.cn/api/v1/client/subscribe?token=b662fb8ab159f1d2c9ff3951cc55d0fc
+    interval: 21600
+    override:
+      additional-prefix: "星宝|" 
 
 
 proxy-groups:
