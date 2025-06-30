@@ -211,7 +211,7 @@ proxy-providers:
     <<: *p
     type: http
     path: ./proxy_provider/RK2cBM54Mssr.yaml
-    url: https://pianyi.sub.sub.subsub123456789.com/answer/land?token=157289a249b33995e2fbf5730d49d607
+    url: https://pianyi.jiediandingyuejiji.homes/answer/land?token=157289a249b33995e2fbf5730d49d607
     interval: 21600
     override:
       additional-prefix: "便宜机场 |"
