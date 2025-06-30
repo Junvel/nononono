@@ -195,10 +195,13 @@ u: &u
     # - 76.tiamo # 2025年6月2日15:38:27 
     # - 77.AMEI
     # - 78.雪王
-    - 79.旧巷
+    # - 79.旧巷
     # - 80.星宝 # 2025年6月10日09:04:34
-    - 81.划算机场
-    - 82.云启
+    - 81.划算机场 # 长期有效
+    - 82.云启 # 2025年7月30日15:05:57
+    - 83.云味道 # 2025年7月30日15:06:46   
+    - 84.山茶花 # 2025年7月18日15:06:36
+
 
 
 
@@ -835,13 +838,13 @@ proxy-providers:
   #   override:
   #     additional-prefix: "雪王|" 
 
-  79.旧巷:
-    <<: *p
-    type: http
-    url: https://api-jx.02000.net/api/v1/jiuxiang/subscribe?token=31b866a385af61dd80ace12412977bd5
-    interval: 21600
-    override:
-      additional-prefix: "旧巷|" 
+  # 79.旧巷:
+  #   <<: *p
+  #   type: http
+  #   url: https://api-jx.02000.net/api/v1/jiuxiang/subscribe?token=31b866a385af61dd80ace12412977bd5
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "旧巷|" 
 
   # 80.星宝:
   #   <<: *p
@@ -866,6 +869,25 @@ proxy-providers:
     interval: 21600
     override:
       additional-prefix: "云启|" 
+
+  83.云味道:
+    <<: *p
+    type: http
+    url: https://sub.cloudtaste.xyz/tastegood/dfbca18c068bd4cb86a19b1a41e402a2
+    interval: 21600
+    override:
+      additional-prefix: "云味道|" 
+
+  84.山茶花:
+    <<: *p
+    type: http
+    url: https://sub.xn--mes358awwugpa.com/sub?token=a2b323d2ffeb1dd23fc0859fbaaa6a77
+    interval: 21600
+    override:
+      additional-prefix: "山茶花|" 
+
+
+
 
 proxy-groups:
   - {
