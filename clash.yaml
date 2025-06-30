@@ -159,9 +159,9 @@ u: &u
     # - 40.红叶
     # - 41.优惠机场
     # - 42.公益网络
-    - 43.33云
+    # - 43.33云
     # - 44.NEX    
-    - 45.网速猫     
+    # - 45.网速猫     
     # - 46.Panda    
     # - 47.布丁猫  
     # - 48.Cloud  
@@ -184,20 +184,21 @@ u: &u
     # - 65.汽水
     # - 66.Acc
     # - 67.Saa
-    - 68.专线云
-    - 69.元宝   
-    - 70.米云  
-    - 71.第五季
+    # - 68.专线云
+    # - 69.元宝   
+    # - 70.米云  
+    # - 71.第五季
     # - 72.AirUDP # 2025年5月28日14:25:16
     - 73.小可梦
-    - 74.一元中转
-    - 75.克洛斯
-    - 76.tiamo # 2025年6月2日15:38:27 
-    - 77.AMEI
-    - 78.雪王
+    # - 74.一元中转
+    # - 75.克洛斯
+    # - 76.tiamo # 2025年6月2日15:38:27 
+    # - 77.AMEI
+    # - 78.雪王
     - 79.旧巷
-    - 80.星宝 # 2025年6月10日09:04:34
-
+    # - 80.星宝 # 2025年6月10日09:04:34
+    - 81.划算机场
+    - 82.云启
 
 
 
@@ -546,13 +547,13 @@ proxy-providers:
   #   override:
   #     additional-prefix: "公益网络 |"   
       
-  43.33云:
-    <<: *p
-    type: http
-    url: http://s.33y.run/v3/subscr?id=628921fe2d394a6a880e9f17f9ed22d9
-    interval: 21600
-    override:
-      additional-prefix: "33云 |"   
+  # 43.33云:
+  #   <<: *p
+  #   type: http
+  #   url: http://s.33y.run/v3/subscr?id=628921fe2d394a6a880e9f17f9ed22d9
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "33云 |"   
 
   # 44.NEX:
   #   <<: *p
@@ -562,13 +563,13 @@ proxy-providers:
   #   override:
   #     additional-prefix: "NEX |"   
 
-  45.网速猫:
-    <<: *p
-    type: http
-    url: https://a.s2cat.cc/api/v1/client/subscribe?token=7beb0838b5f92daea529a9b60bd7ab96
-    interval: 21600
-    override:
-      additional-prefix: "网速猫 |"   
+  # 45.网速猫:
+  #   <<: *p
+  #   type: http
+  #   url: https://a.s2cat.cc/api/v1/client/subscribe?token=7beb0838b5f92daea529a9b60bd7ab96
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "网速猫 |"   
 
   # 46.Panda:
   #   <<: *p
@@ -746,37 +747,37 @@ proxy-providers:
   #   override:
   #     additional-prefix: "Saa|"
   
-  68.专线云:
-    <<: *p
-    type: http
-    url: https://sub.xn--ohqvl098j.com/s/1644972cc4c52e2da46e982e43e377c6
-    interval: 21600
-    override:
-      additional-prefix: "专线云|"   
+  # 68.专线云:
+  #   <<: *p
+  #   type: http
+  #   url: https://sub.xn--ohqvl098j.com/s/1644972cc4c52e2da46e982e43e377c6
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "专线云|"   
       
-  69.元宝:
-    <<: *p
-    type: http
-    url: https://yuanbao.yuanbaojc.store/s/25b82a925db356a3992ee8814cc0b6d0
-    interval: 21600
-    override:
-      additional-prefix: "元宝|"   
+  # 69.元宝:
+  #   <<: *p
+  #   type: http
+  #   url: https://yuanbao.yuanbaojc.store/s/25b82a925db356a3992ee8814cc0b6d0
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "元宝|"   
 
-  70.米云:
-    <<: *p
-    type: http
-    url: https://sub.bestbestbest.sbs/subbest/mi/0d5383d66f4a73f507d91e1b672aaa07
-    interval: 21600
-    override:
-      additional-prefix: "米云|" 
+  # 70.米云:
+  #   <<: *p
+  #   type: http
+  #   url: https://sub.bestbestbest.sbs/subbest/mi/0d5383d66f4a73f507d91e1b672aaa07
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "米云|" 
 
-  71.第五季:
-    <<: *p
-    type: http
-    url: https://diwu.di5ji.lat/api/v1/client/subscribe?token=42f87afe1766b9064c0ec04d9ed96506
-    interval: 21600
-    override:
-      additional-prefix: "第五季|" 
+  # 71.第五季:
+  #   <<: *p
+  #   type: http
+  #   url: https://diwu.di5ji.lat/api/v1/client/subscribe?token=42f87afe1766b9064c0ec04d9ed96506
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "第五季|" 
 
   # 72.AirUDP:
   #   <<: *p
@@ -794,45 +795,45 @@ proxy-providers:
     override:
       additional-prefix: "小可梦|"  
 
-  74.一元中转:
-    <<: *p
-    type: http
-    url: https://s.yyzzyyds.xyz/yyzz/114514/subscribe/a2a37e291a87d18e2ec3098344ce63a3
-    interval: 21600
-    override:
-      additional-prefix: "一元中转|"  
+  # 74.一元中转:
+  #   <<: *p
+  #   type: http
+  #   url: https://s.yyzzyyds.xyz/yyzz/114514/subscribe/a2a37e291a87d18e2ec3098344ce63a3
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "一元中转|"  
 
-  75.克洛斯:
-    <<: *p
-    type: http
-    url: http://sub3.127665.xyz/s/773ecff070f581b5b3ef768da3cce42c
-    interval: 21600
-    override:
-      additional-prefix: "克洛斯|"  
+  # 75.克洛斯:
+  #   <<: *p
+  #   type: http
+  #   url: http://sub3.127665.xyz/s/773ecff070f581b5b3ef768da3cce42c
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "克洛斯|"  
       
-  76.tiamo:
-    <<: *p
-    type: http
-    url: https://tiamocloud.top/s/65852b3473fc517d88b0041a58d74cbd
-    interval: 21600
-    override:
-      additional-prefix: "tiamo|" 
+  # 76.tiamo:
+  #   <<: *p
+  #   type: http
+  #   url: https://tiamocloud.top/s/65852b3473fc517d88b0041a58d74cbd
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "tiamo|" 
 
-  77.AMEI:
-    <<: *p
-    type: http
-    url: https://xb.inekokkk.com/amei/ab16bee70abd35b164e03434b7608d32
-    interval: 21600
-    override:
-      additional-prefix: "AMEI|" 
+  # 77.AMEI:
+  #   <<: *p
+  #   type: http
+  #   url: https://xb.inekokkk.com/amei/ab16bee70abd35b164e03434b7608d32
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "AMEI|" 
 
-  78.雪王:
-    <<: *p
-    type: http
-    url: https://sub.xn--vpn-3f0h822m.com/s/64bbe6a8f9597cc7575026537ee8b04b
-    interval: 21600
-    override:
-      additional-prefix: "雪王|" 
+  # 78.雪王:
+  #   <<: *p
+  #   type: http
+  #   url: https://sub.xn--vpn-3f0h822m.com/s/64bbe6a8f9597cc7575026537ee8b04b
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "雪王|" 
 
   79.旧巷:
     <<: *p
@@ -842,14 +843,29 @@ proxy-providers:
     override:
       additional-prefix: "旧巷|" 
 
-  80.星宝:
+  # 80.星宝:
+  #   <<: *p
+  #   type: http
+  #   url: https://xingbaody.ekxo.cn/api/v1/client/subscribe?token=b662fb8ab159f1d2c9ff3951cc55d0fc
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "星宝|" 
+
+  81.划算机场:
     <<: *p
     type: http
-    url: https://xingbaody.ekxo.cn/api/v1/client/subscribe?token=b662fb8ab159f1d2c9ff3951cc55d0fc
+    url: https://vpn.huasuan666.top/api/v1/client/subscribe?token=5e3469f29d8823b88a4d2350fab3d9d8
     interval: 21600
     override:
-      additional-prefix: "星宝|" 
+      additional-prefix: "划算机场|" 
 
+  82.云启:
+    <<: *p
+    type: http
+    url: https://1122.yunjijd.xyz/api/v1/client/subscribe?token=5f90c1c555c61e662aec9f1db97ee800
+    interval: 21600
+    override:
+      additional-prefix: "云启|" 
 
 proxy-groups:
   - {
