@@ -200,7 +200,12 @@ u: &u
     - 81.划算机场 # 长期有效
     - 82.云启 # 2025年7月30日15:05:57
     - 83.云味道 # 2025年7月30日15:06:46   
-    - 84.山茶花 # 2025年7月18日15:06:36
+    - 84.山茶花 # 2025年7月18日15:06:36   
+    - 85.新一元 # 2025年8月1日10:53:47
+    - 86.纸飞机 # 2025年8月1日10:53:47
+    - 87.好梯子 # 2025年8月1日10:53:47
+    - 88.疾风 # 2025年8月7日15:07:25  
+    - 89.免流云 # 2025年8月3日15:07:25  
 
 
 
@@ -884,7 +889,51 @@ proxy-providers:
     url: https://sub.xn--mes358awwugpa.com/sub?token=a2b323d2ffeb1dd23fc0859fbaaa6a77
     interval: 21600
     override:
-      additional-prefix: "山茶花|" 
+      additional-prefix: "山茶花|"        
+
+  85.新一元:
+    <<: *p
+    type: http
+    url: https://best.momoxiaodian.cc/mo99/serve/axiba/gov?token=1140dab5b4142a7e3edd488eb5a55fb3
+    interval: 21600
+    override:
+      additional-prefix: "新一元|" 
+
+  86.纸飞机:
+    <<: *p
+    type: http
+    url: http://8.138.34.87:3389/saccess/eaa17979170bf0f8e5093a6ac207b59d
+    interval: 21600
+    override:
+      additional-prefix: "纸飞机|" 
+
+  87.好梯子:
+    <<: *p
+    type: http
+    url: https://xin.students.xin/api/v1/client/subscribe?token=919895e84ab662597a5b6f514f0e36bf
+    interval: 21600
+    override:
+      additional-prefix: "好梯子|" 
+
+  88.疾风:
+    <<: *p
+    type: http
+    url: https://156.224.78.44:10086/api/v1/client/subscribe?token=f3e620bffd6974adfec83da775c28c3b
+    interval: 21600
+    override:
+      additional-prefix: "疾风|"  
+
+  89.免流云:
+    <<: *p
+    type: http
+    url: https://mly1.543412546.xyz/api/v1/client/subscribe?token=17e3e806a376966a26dafc7d654c876f
+    interval: 21600
+    override:
+      additional-prefix: "免流云|"  
+
+
+
+
 
 
 
