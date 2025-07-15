@@ -205,7 +205,12 @@ u: &u
     - 86.纸飞机 # 2025年8月1日10:53:47
     - 87.好梯子 # 2025年8月1日10:53:47
     - 88.疾风 # 2025年8月7日15:07:25  
-    - 89.免流云 # 2025年8月3日15:07:25  
+    - 89.免流云 # 2025年8月3日15:07:25      
+    - 90.豌豆机场 # 2025年8月14日15:07:25
+    - 91.星港机场 # 2025年8月14日15:07:25
+    - 92.星轨 # 2025年8月14日15:07:25
+    - 93.红豆 # 2025年8月15日10:04:28
+
 
 
 
@@ -931,6 +936,37 @@ proxy-providers:
     override:
       additional-prefix: "免流云|"  
 
+  90.豌豆机场:    
+    <<: *p
+    type: http
+    url: https://sub.xn--mh3ala.xyz/wandouyun/61cf0024ce89b74eb98a1a98e5e70702
+    interval: 21600
+    override:
+      additional-prefix: "豌豆机场|"    
+
+  91.星港机场:
+    <<: *p
+    type: http
+    url: https://1a.xg-hub.icu/api/v1/client/subscribe?token=10be023fe26a1dd0b88cf1da74d506ff
+    interval: 21600
+    override:
+      additional-prefix: "星港机场|"    
+
+  92.星轨:
+    <<: *p
+    type: http
+    url: https://honkai.srcloud.art/s/3740a76a4def7119f2761eb8062dda83
+    interval: 21600
+    override:
+      additional-prefix: "星轨|"      
+
+  93.红豆:
+    <<: *p
+    type: http
+    url: https://img.redbean.pro/static/c344c3bc8cc9ba84216d8b8b79bcf178
+    interval: 21600
+    override:
+      additional-prefix: "红豆|"        
 
 
 
