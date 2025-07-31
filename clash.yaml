@@ -974,12 +974,12 @@ proxy-providers:
       additional-prefix: "全民机场|"  
 
   95.数字航站:
-      <<: *p
+    <<: *p
     type: http
     url: https://gw.dport.top/api/v1/client/subscribe?token=8387d471d62525b98779fe2319d47325
     interval: 21600
     override:
-      additional-prefix: "数字航站|"  
+    additional-prefix: "数字航站|"  
       
 oups:
   - {
