@@ -128,7 +128,7 @@ u: &u
     # - 9.加速器
     # - 10.地鼠机场
     # - 11.快乐机场
-    - 12.宝可梦
+    # - 12.宝可梦
     # - 13.星巴克
     # - 14.PowerWan
     # - 15.蘑菇饭
@@ -197,24 +197,21 @@ u: &u
     # - 78.雪王
     # - 79.旧巷
     # - 80.星宝 # 2025年6月10日09:04:34
-    - 81.划算机场 # 长期有效
-    - 82.云启 # 2025年7月30日15:05:57
-    - 83.云味道 # 2025年7月30日15:06:46   
-    - 84.山茶花 # 2025年7月18日15:06:36   
-    - 85.新一元 # 2025年8月1日10:53:47
-    - 86.纸飞机 # 2025年8月1日10:53:47
-    - 87.好梯子 # 2025年8月1日10:53:47
-    - 88.疾风 # 2025年8月7日15:07:25  
-    - 89.免流云 # 2025年8月3日15:07:25      
-    - 90.豌豆机场 # 2025年8月14日15:07:25
+    # - 81.划算机场 # 长期有效
+    # - 82.云启 # 2025年7月30日15:05:57
+    # - 83.云味道 # 2025年7月30日15:06:46   
+    # - 84.山茶花 # 2025年7月18日15:06:36   
+    # - 85.新一元 # 2025年8月1日10:53:47
+    # - 86.纸飞机 # 2025年8月1日10:53:47
+    # - 87.好梯子 # 2025年8月1日10:53:47
+    # - 88.疾风 # 2025年8月7日15:07:25  
+    # - 89.免流云 # 2025年8月3日15:07:25      
+    # - 90.豌豆机场 # 2025年8月14日15:07:25
     - 91.星港机场 # 2025年8月14日15:07:25
     - 92.星轨 # 2025年8月14日15:07:25
-    - 93.红豆 # 2025年8月15日10:04:28
-
-
-
-
-
+    # - 93.红豆 # 2025年8月15日10:04:28
+    - 94.全民机场 # 2025年8月31日09:23:02
+    - 95.数字航站 # 2025年8月31日09:23:02
 
 proxy-providers:
   1.便宜机场:
@@ -311,13 +308,13 @@ proxy-providers:
   #   override:
   #     additional-prefix: "快乐机场 |"
 
-  12.宝可梦:
-    <<: *p
-    type: http
-    url: https://52pokemon.xz61.cn/api/v1/client/subscribe?token=7f71255e4ca90b031e3349965ca24e01
-    interval: 21600
-    override:
-      additional-prefix: "宝可梦 |"
+  # 12.宝可梦:
+  #   <<: *p
+  #   type: http
+  #   url: https://52pokemon.xz61.cn/api/v1/client/subscribe?token=7f71255e4ca90b031e3349965ca24e01
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "宝可梦 |"
 
   # 13.星巴克:
   #   <<: *p
@@ -864,85 +861,85 @@ proxy-providers:
   #   override:
   #     additional-prefix: "星宝|" 
 
-  81.划算机场:
-    <<: *p
-    type: http
-    url: https://vpn.huasuan666.top/api/v1/client/subscribe?token=5e3469f29d8823b88a4d2350fab3d9d8
-    interval: 21600
-    override:
-      additional-prefix: "划算机场|" 
+  # 81.划算机场:
+  #   <<: *p
+  #   type: http
+  #   url: https://vpn.huasuan666.top/api/v1/client/subscribe?token=5e3469f29d8823b88a4d2350fab3d9d8
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "划算机场|" 
 
-  82.云启:
-    <<: *p
-    type: http
-    url: https://1122.yunjijd.xyz/api/v1/client/subscribe?token=5f90c1c555c61e662aec9f1db97ee800
-    interval: 21600
-    override:
-      additional-prefix: "云启|" 
+  # 82.云启:
+  #   <<: *p
+  #   type: http
+  #   url: https://1122.yunjijd.xyz/api/v1/client/subscribe?token=5f90c1c555c61e662aec9f1db97ee800
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "云启|" 
 
-  83.云味道:
-    <<: *p
-    type: http
-    url: https://sub.cloudtaste.xyz/tastegood/dfbca18c068bd4cb86a19b1a41e402a2
-    interval: 21600
-    override:
-      additional-prefix: "云味道|" 
+  # 83.云味道:
+  #   <<: *p
+  #   type: http
+  #   url: https://sub.cloudtaste.xyz/tastegood/dfbca18c068bd4cb86a19b1a41e402a2
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "云味道|" 
 
-  84.山茶花:
-    <<: *p
-    type: http
-    url: https://sub.xn--mes358awwugpa.com/sub?token=a2b323d2ffeb1dd23fc0859fbaaa6a77
-    interval: 21600
-    override:
-      additional-prefix: "山茶花|"        
+  # 84.山茶花:
+  #   <<: *p
+  #   type: http
+  #   url: https://sub.xn--mes358awwugpa.com/sub?token=a2b323d2ffeb1dd23fc0859fbaaa6a77
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "山茶花|"        
 
-  85.新一元:
-    <<: *p
-    type: http
-    url: https://best.momoxiaodian.cc/mo99/serve/axiba/gov?token=1140dab5b4142a7e3edd488eb5a55fb3
-    interval: 21600
-    override:
-      additional-prefix: "新一元|" 
+  # 85.新一元:
+  #   <<: *p
+  #   type: http
+  #   url: https://best.momoxiaodian.cc/mo99/serve/axiba/gov?token=1140dab5b4142a7e3edd488eb5a55fb3
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "新一元|" 
 
-  86.纸飞机:
-    <<: *p
-    type: http
-    url: http://8.138.34.87:3389/saccess/eaa17979170bf0f8e5093a6ac207b59d
-    interval: 21600
-    override:
-      additional-prefix: "纸飞机|" 
+  # 86.纸飞机:
+  #   <<: *p
+  #   type: http
+  #   url: http://8.138.34.87:3389/saccess/eaa17979170bf0f8e5093a6ac207b59d
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "纸飞机|" 
 
-  87.好梯子:
-    <<: *p
-    type: http
-    url: https://xin.students.xin/api/v1/client/subscribe?token=919895e84ab662597a5b6f514f0e36bf
-    interval: 21600
-    override:
-      additional-prefix: "好梯子|" 
+  # 87.好梯子:
+  #   <<: *p
+  #   type: http
+  #   url: https://xin.students.xin/api/v1/client/subscribe?token=919895e84ab662597a5b6f514f0e36bf
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "好梯子|" 
 
-  88.疾风:
-    <<: *p
-    type: http
-    url: https://156.224.78.44:10086/api/v1/client/subscribe?token=f3e620bffd6974adfec83da775c28c3b
-    interval: 21600
-    override:
-      additional-prefix: "疾风|"  
+  # 88.疾风:
+  #   <<: *p
+  #   type: http
+  #   url: https://156.224.78.44:10086/api/v1/client/subscribe?token=f3e620bffd6974adfec83da775c28c3b
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "疾风|"  
 
-  89.免流云:
-    <<: *p
-    type: http
-    url: https://mly1.543412546.xyz/api/v1/client/subscribe?token=17e3e806a376966a26dafc7d654c876f
-    interval: 21600
-    override:
-      additional-prefix: "免流云|"  
+  # 89.免流云:
+  #   <<: *p
+  #   type: http
+  #   url: https://mly1.543412546.xyz/api/v1/client/subscribe?token=17e3e806a376966a26dafc7d654c876f
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "免流云|"  
 
-  90.豌豆机场:    
-    <<: *p
-    type: http
-    url: https://sub.xn--mh3ala.xyz/wandouyun/61cf0024ce89b74eb98a1a98e5e70702
-    interval: 21600
-    override:
-      additional-prefix: "豌豆机场|"    
+  # 90.豌豆机场:    
+  #   <<: *p
+  #   type: http
+  #   url: https://sub.xn--mh3ala.xyz/wandouyun/61cf0024ce89b74eb98a1a98e5e70702
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "豌豆机场|"    
 
   91.星港机场:
     <<: *p
@@ -960,21 +957,31 @@ proxy-providers:
     override:
       additional-prefix: "星轨|"      
 
-  93.红豆:
+  # 93.红豆:
+  #   <<: *p
+  #   type: http
+  #   url: https://img.redbean.pro/static/c344c3bc8cc9ba84216d8b8b79bcf178
+  #   interval: 21600
+  #   override:
+  #     additional-prefix: "红豆|"        
+
+  94.全民机场:
     <<: *p
     type: http
-    url: https://img.redbean.pro/static/c344c3bc8cc9ba84216d8b8b79bcf178
+    url: https://api-km.9527app.site/km?token=b24df8bc158f1eb2deba0f448d5e291a
     interval: 21600
     override:
-      additional-prefix: "红豆|"        
+      additional-prefix: "全民机场|"  
 
-
-
-
-
-
-
-proxy-groups:
+  95.数字航站:
+      <<: *p
+    type: http
+    url: https://gw.dport.top/api/v1/client/subscribe?token=8387d471d62525b98779fe2319d47325
+    interval: 21600
+    override:
+      additional-prefix: "数字航站|"  
+      
+oups:
   - {
       name: 🎯Mode,
       type: select,
@@ -1108,18 +1115,35 @@ rule-providers:
     path: ./rule/fcm.yaml
     interval: 43200
 
+# rules:
+#   - DOMAIN,realiti.me,🎏Final
+#   - DOMAIN,clash.realiti.me,🎏Final
+#   # - Rule Group
+#   - RULE-SET,Google,🧭Google
+#   - RULE-SET,Microsoft,🪁Microsoft
+#   - RULE-SET,Telegram,💬Telegram
+#   - RULE-SET,SteamCN,🍃DirectMode
+#   - RULE-SET,Steam,🎮️Steam
+#   - RULE-SET,OpenAI,🤖OpenAI
+#   - RULE-SET,FCM,🍃DirectMode
+#   # GEO Rule
+#   - GEOSITE,CN,🍃DirectMode
+#   - GEOIP,CN,🍃DirectMode,no-resolve
+#   - MATCH,🎏Final
+
 rules:
   - DOMAIN,realiti.me,🎏Final
   - DOMAIN,clash.realiti.me,🎏Final
-  # - Rule Group
+  # 优先处理直连规则
+  - GEOSITE,CN,🍃DirectMode
+  - GEOIP,CN,🍃DirectMode,no-resolve
+  # 然后是其他分类规则
   - RULE-SET,Google,🧭Google
   - RULE-SET,Microsoft,🪁Microsoft
   - RULE-SET,Telegram,💬Telegram
-  - RULE-SET,SteamCN,🍃DirectMode
+  - RULE-SET,SteamCN,🍃DirectMode # 这个已经指向直连，但顺序可以调整
   - RULE-SET,Steam,🎮️Steam
   - RULE-SET,OpenAI,🤖OpenAI
-  - RULE-SET,FCM,🍃DirectMode
-  # GEO Rule
-  - GEOSITE,CN,🍃DirectMode
-  - GEOIP,CN,🍃DirectMode,no-resolve
+  - RULE-SET,FCM,🍃DirectMode # 这个已经指向直连，但顺序可以调整
+  # 兜底规则
   - MATCH,🎏Final
