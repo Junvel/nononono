@@ -210,8 +210,8 @@ u: &u
     - 91.星港机场 # 2025年8月14日15:07:25
     - 92.星轨 # 2025年8月14日15:07:25
     # - 93.红豆 # 2025年8月15日10:04:28
-    - 94.全民机场 # 2025年8月31日09:23:02
-    - 95.数字航站 # 2025年8月31日09:23:02
+    - 94.数字航站 # 2025年8月31日10:04:28
+    - 95.筋斗云 # 2025年8月31日10:04:28
 
 proxy-providers:
   1.便宜机场:
@@ -963,25 +963,25 @@ proxy-providers:
   #   url: https://img.redbean.pro/static/c344c3bc8cc9ba84216d8b8b79bcf178
   #   interval: 21600
   #   override:
-  #     additional-prefix: "红豆|"        
+  #     additional-prefix: "红豆|"     
 
-  94.全民机场:
-    <<: *p
-    type: http
-    url: https://api-km.9527app.site/km?token=b24df8bc158f1eb2deba0f448d5e291a
-    interval: 21600
-    override:
-      additional-prefix: "全民机场|"  
-
-  95.数字航站:
+  94.数字航站:
     <<: *p
     type: http
     url: https://gw.dport.top/api/v1/client/subscribe?token=8387d471d62525b98779fe2319d47325
     interval: 21600
     override:
-    additional-prefix: "数字航站|"  
-      
-oups:
+      additional-prefix: "数字航站|"  
+
+  95.筋斗云:
+    <<: *p
+    type: http
+    url: https://api-km.9527app.site/km?token=b24df8bc158f1eb2deba0f448d5e291a
+    interval: 21600
+    override:
+      additional-prefix: "筋斗云|"  
+
+proxy-groups:
   - {
       name: 🎯Mode,
       type: select,
@@ -1115,35 +1115,18 @@ rule-providers:
     path: ./rule/fcm.yaml
     interval: 43200
 
-# rules:
-#   - DOMAIN,realiti.me,🎏Final
-#   - DOMAIN,clash.realiti.me,🎏Final
-#   # - Rule Group
-#   - RULE-SET,Google,🧭Google
-#   - RULE-SET,Microsoft,🪁Microsoft
-#   - RULE-SET,Telegram,💬Telegram
-#   - RULE-SET,SteamCN,🍃DirectMode
-#   - RULE-SET,Steam,🎮️Steam
-#   - RULE-SET,OpenAI,🤖OpenAI
-#   - RULE-SET,FCM,🍃DirectMode
-#   # GEO Rule
-#   - GEOSITE,CN,🍃DirectMode
-#   - GEOIP,CN,🍃DirectMode,no-resolve
-#   - MATCH,🎏Final
-
 rules:
   - DOMAIN,realiti.me,🎏Final
   - DOMAIN,clash.realiti.me,🎏Final
-  # 优先处理直连规则
-  - GEOSITE,CN,🍃DirectMode
-  - GEOIP,CN,🍃DirectMode,no-resolve
-  # 然后是其他分类规则
+  # - Rule Group
   - RULE-SET,Google,🧭Google
   - RULE-SET,Microsoft,🪁Microsoft
   - RULE-SET,Telegram,💬Telegram
-  - RULE-SET,SteamCN,🍃DirectMode # 这个已经指向直连，但顺序可以调整
+  - RULE-SET,SteamCN,🍃DirectMode
   - RULE-SET,Steam,🎮️Steam
   - RULE-SET,OpenAI,🤖OpenAI
-  - RULE-SET,FCM,🍃DirectMode # 这个已经指向直连，但顺序可以调整
-  # 兜底规则
+  - RULE-SET,FCM,🍃DirectMode
+  # GEO Rule
+  - GEOSITE,CN,🍃DirectMode
+  - GEOIP,CN,🍃DirectMode,no-resolve
   - MATCH,🎏Final
